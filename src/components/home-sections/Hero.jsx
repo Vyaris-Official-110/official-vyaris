@@ -1,5 +1,5 @@
 import React from 'react';
-import { GeneratedImage } from '../../ui/GeneratedImage';
+import { GeneratedImage } from '../ui/GeneratedImage';
 import { ArrowRight } from 'lucide-react';
 
 export const Hero = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Plus } from 'lucide-react';
-import { GeneratedImage } from '../../ui/GeneratedImage';
+import { GeneratedImage } from '../ui/GeneratedImage';
 
 const ClientLogo = ({ i }) => (
     <div className="bg-zinc-900 border border-zinc-800 h-24 flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all hover:bg-zinc-800">

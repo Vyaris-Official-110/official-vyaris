@@ -1,0 +1,12 @@
+import React from 'react';
+
+export const ContactMap = () => (
+  <div className="relative h-[600px] w-full z-0 mt-[-100px]">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48388.929990966964!2d-74.00332!3d40.711233!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1653598669477!5m2!1sen!2sus"
+      className="w-full h-full border-0 filter grayscale invert contrast-[1.1] brightness-[0.8]"
+      allowFullScreen=""
+      loading="lazy"
+    ></iframe>
+  </div>
+);
