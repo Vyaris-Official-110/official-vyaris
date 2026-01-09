@@ -1,42 +1,160 @@
-import React from 'react';
-import { Send } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { useState } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
-export const ContactForm = () => (
-  <div className="md:col-span-8">
-    <div className="mb-10">
-      <div className="inline-block px-3 py-1 border border-white/10 rounded-full mb-4">
-        <span className="text-[10px] uppercase tracking-widest text-zinc-400">Have Questions?</span>
-      </div>
-      <h2 className="text-4xl font-bold text-white mb-2">Send us a Massage</h2>
+const InputField = ({ label, type = 'text', placeholder, required, name }) => (
+    <div className="group">
+        <label className="text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-3">
+            {label} {required && <span className="text-primary">*</span>}
+        </label>
+        <input
+            type={type}
+            name={name}
+            placeholder={placeholder}
+            required={required}
+            className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-5 py-4 text-white placeholder-zinc-500 focus:outline-none focus:border-primary transition-colors text-sm"
+        />
     </div>
-
-    <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-      <div className="space-y-8">
-        <div className="group relative">
-          <input type="text" placeholder="Name" className="w-full bg-transparent border-b border-zinc-700 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-primary transition-colors text-sm" />
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="group relative">
-            <input type="email" placeholder="Email*" className="w-full bg-transparent border-b border-zinc-700 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-primary transition-colors text-sm" />
-          </div>
-          <div className="group relative">
-            <input type="tel" placeholder="Phone" className="w-full bg-transparent border-b border-zinc-700 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-primary transition-colors text-sm" />
-          </div>
-        </div>
-
-        <div className="group relative">
-          <textarea placeholder="Tell Us About Project *" className="w-full bg-transparent border-b border-zinc-700 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-primary transition-colors text-sm min-h-[100px] resize-none"></textarea>
-          <div className="absolute bottom-3 right-0 w-2 h-2 border-r border-b border-zinc-600"></div>
-        </div>
-      </div>
-
-      <div className="pt-2">
-        <Button primary className="w-full md:w-auto px-10">
-          Get in Touch <Send className="w-4 h-4 ml-2" />
-        </Button>
-      </div>
-    </form>
-  </div>
 );
+
+const SelectField = ({ label, options, required, name }) => (
+    <div className="group">
+        <label className="text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-3">
+            {label} {required && <span className="text-primary">*</span>}
+        </label>
+        <select
+            name={name}
+            required={required}
+            className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary transition-colors text-sm appearance-none cursor-pointer"
+        >
+            <option value="">Select an option</option>
+            {options.map((opt, i) => (
+                <option key={i} value={opt.value}>{opt.label}</option>
+            ))}
+        </select>
+    </div>
+);
+
+export const ContactForm = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        // Simulate form submission
+        setTimeout(() => setIsSubmitting(false), 2000);
+    };
+
+    const services = [
+        { value: 'branding', label: 'Brand Strategy' },
+        { value: 'web-design', label: 'Web Design & Development' },
+        { value: 'mobile-app', label: 'Mobile App Development' },
+        { value: 'marketing', label: 'Digital Marketing' },
+        { value: 'ui-ux', label: 'UI/UX Design' },
+        { value: 'other', label: 'Other' },
+    ];
+
+    const budgets = [
+        { value: '5k-10k', label: '$5,000 - $10,000' },
+        { value: '10k-25k', label: '$10,000 - $25,000' },
+        { value: '25k-50k', label: '$25,000 - $50,000' },
+        { value: '50k+', label: '$50,000+' },
+    ];
+
+    return (
+        <div className="h-full flex flex-col">
+            {/* Header */}
+            <div className="mb-10">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-full mb-6">
+                    <span className="w-2 h-2 bg-primary rounded-full"></span>
+                    <span className="text-xs font-medium text-zinc-400">Quick Response Guaranteed</span>
+                </div>
+                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                    Send us a message
+                </h2>
+                <p className="text-zinc-400">
+                    Fill out the form below and we'll get back to you within 24 hours.
+                </p>
+            </div>
+
+            {/* Form */}
+            <form onSubmit={handleSubmit} className="space-y-6 flex-1">
+                {/* Name & Email Row */}
+                <div className="grid md:grid-cols-2 gap-6">
+                    <InputField
+                        label="Your Name"
+                        name="name"
+                        placeholder="John Doe"
+                        required
+                    />
+                    <InputField
+                        label="Email Address"
+                        type="email"
+                        name="email"
+                        placeholder="john@example.com"
+                        required
+                    />
+                </div>
+
+                {/* Service & Budget Row */}
+                <div className="grid md:grid-cols-2 gap-6">
+                    <SelectField
+                        label="Service Interested In"
+                        name="service"
+                        options={services}
+                        required
+                    />
+                    <SelectField
+                        label="Project Budget"
+                        name="budget"
+                        options={budgets}
+                    />
+                </div>
+
+                {/* Message */}
+                <div className="group">
+                    <label className="text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-3">
+                        Project Details <span className="text-primary">*</span>
+                    </label>
+                    <textarea
+                        name="message"
+                        placeholder="Tell us about your project, goals, and timeline..."
+                        required
+                        rows={5}
+                        className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-5 py-4 text-white placeholder-zinc-500 focus:outline-none focus:border-primary transition-colors text-sm resize-none"
+                    ></textarea>
+                </div>
+
+                {/* Checkbox */}
+                <label className="flex items-start gap-3 cursor-pointer group">
+                    <input
+                        type="checkbox"
+                        className="mt-1 w-5 h-5 rounded border-zinc-700 bg-zinc-800 text-primary focus:ring-primary focus:ring-offset-0"
+                    />
+                    <span className="text-sm text-zinc-400 group-hover:text-zinc-300 transition-colors">
+                        I agree to receive communications from Vyaris. You can unsubscribe at any time.
+                    </span>
+                </label>
+
+                {/* Submit Button */}
+                <div className="pt-4">
+                    <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="group inline-flex items-center gap-3 px-8 py-4 bg-primary text-black font-bold uppercase tracking-wider rounded-full hover:bg-white transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                    >
+                        {isSubmitting ? (
+                            <>
+                                <span className="animate-pulse">Sending...</span>
+                            </>
+                        ) : (
+                            <>
+                                Send Message
+                                <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                            </>
+                        )}
+                    </button>
+                </div>
+            </form>
+        </div>
+    );
+};
