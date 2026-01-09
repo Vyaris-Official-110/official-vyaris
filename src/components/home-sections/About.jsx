@@ -1,42 +1,80 @@
 import React from 'react';
 import { GeneratedImage } from '../ui/GeneratedImage';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MoveUpRight } from 'lucide-react';
 
 export const About = () => {
     return (
-        <section id="about" className="py-24 bg-background overflow-hidden">
-            <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div className="relative">
-                         <div className="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
-                         <GeneratedImage 
-                            prompt="Modern office interior minimalist, dark mode, team working, high tech environment"
-                            className="relative z-10 w-full rounded-sm grayscale hover:grayscale-0 transition-all duration-700"
-                         />
-                    </div>
-                    
-                    <div className="space-y-8">
-                        <div className="flex items-start gap-4">
-                             <div className="mt-2 w-12 h-[1px] bg-primary"></div>
-                             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                                Original creative & <br/> <span className="text-zinc-600">digital agency</span>
-                             </h2>
+        <section className="relative py-24 lg:py-32 bg-[#0a0a0a]">
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    {/* Image Section */}
+                    <div className="lg:col-span-5">
+                        <div className="relative">
+                            <GeneratedImage
+                                prompt="Abstract 3D sphere with flowing metallic ribbons wrapped around it, dark moody background, professional studio lighting, cinematic, high contrast"
+                                alt="Creative Agency Illustration"
+                                className="w-full h-auto rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
+                            />
                         </div>
-                        
-                        <p className="text-zinc-400 text-lg">
-                           Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument.
-                        </p>
-                        
-                        <div className="space-y-4 pt-4">
-                            {['Social Media', 'Content Writing', 'Video Production'].map((service, index) => (
-                                <a key={index} href="#services" className="group flex items-center justify-between p-4 border-b border-zinc-800 hover:border-primary transition-colors cursor-pointer">
-                                    <span className="text-xl font-medium text-zinc-300 group-hover:text-white transition-colors">{service}</span>
-                                    <div className="flex items-center gap-4">
-                                        <span className="text-zinc-600 font-mono text-sm">0{index + 1}</span>
-                                        <ArrowRight className="w-5 h-5 text-zinc-600 group-hover:text-primary -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all" />
+                    </div>
+
+                    {/* Content Section */}
+                    <div className="lg:col-span-6 lg:col-start-7">
+                        <div className="space-y-10">
+                            {/* Title with Arrow */}
+                            <div className="space-y-6">
+                                <div className="flex items-start gap-6">
+                                    <div className="flex-shrink-0 mt-2">
+                                        <MoveUpRight className="w-14 h-14 lg:w-16 lg:h-16 text-white/80 stroke-[1.5]" />
                                     </div>
-                                </a>
-                            ))}
+                                    <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] tracking-tight">
+                                        Best creative &amp; digital agency
+                                    </h2>
+                                </div>
+                                <p className="text-gray-400 text-base lg:text-lg leading-relaxed max-w-2xl">
+                                    Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument out reasonably
+                                </p>
+                            </div>
+
+                            {/* Service List */}
+                            <ul className="space-y-5">
+                                <li>
+                                    <a
+                                        href="#"
+                                        className="flex items-center gap-5 px-8 py-6 rounded-2xl bg-[#1a1a1a] hover:bg-[#252525] transition-all duration-300 group border border-transparent hover:border-gray-800"
+                                    >
+                                        <div className="flex-shrink-0">
+                                            <ArrowRight className="w-5 h-5 text-white/70 group-hover:translate-x-1 transition-transform duration-300" />
+                                        </div>
+                                        <span className="text-2xl font-bold text-gray-600 min-w-[3rem]">01</span>
+                                        <span className="text-lg font-medium text-white">Social Media</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        className="flex items-center gap-5 px-8 py-6 rounded-2xl bg-[#d4ff00] hover:bg-[#e0ff33] transition-all duration-300 group shadow-lg shadow-[#d4ff00]/20"
+                                    >
+                                        <div className="flex-shrink-0">
+                                            <ArrowRight className="w-5 h-5 text-black group-hover:translate-x-1 transition-transform duration-300" />
+                                        </div>
+                                        <span className="text-2xl font-bold text-black/70 min-w-[3rem]">02</span>
+                                        <span className="text-lg font-medium text-black">Content Writing</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        className="flex items-center gap-5 px-8 py-6 rounded-2xl bg-[#1a1a1a] hover:bg-[#252525] transition-all duration-300 group border border-transparent hover:border-gray-800"
+                                    >
+                                        <div className="flex-shrink-0">
+                                            <ArrowRight className="w-5 h-5 text-white/70 group-hover:translate-x-1 transition-transform duration-300" />
+                                        </div>
+                                        <span className="text-2xl font-bold text-gray-600 min-w-[3rem]">03</span>
+                                        <span className="text-lg font-medium text-white">Video Production</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
