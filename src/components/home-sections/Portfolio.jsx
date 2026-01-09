@@ -1,9 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { GeneratedImage } from '../../ui/GeneratedImage';
+import { GeneratedImage } from '../ui/GeneratedImage';
 import { ArrowRight } from 'lucide-react';
-import { FadeIn } from '../../ui/FadeIn';
+import { FadeIn } from '../ui/FadeIn';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

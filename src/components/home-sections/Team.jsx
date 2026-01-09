@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import { GeneratedImage } from '../../ui/GeneratedImage';
+import { GeneratedImage } from '../ui/GeneratedImage';
 import { Linkedin, Facebook, Twitter, Plus } from 'lucide-react';
-import { FadeIn } from '../../ui/FadeIn';
+import { FadeIn } from '../ui/FadeIn';
 import 'swiper/css';
 
 const TeamMember = ({ name, role, img }) => (

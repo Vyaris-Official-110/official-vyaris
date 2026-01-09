@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Calendar, User, MessageSquare } from 'lucide-react';
-import { GeneratedImage } from '../../ui/GeneratedImage';
+import { GeneratedImage } from '../ui/GeneratedImage';
 
 const BlogItem = ({ img, date, author, comments, title }) => (
     <div className="group cursor-pointer">
