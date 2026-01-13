@@ -85,7 +85,7 @@ export const Hero = () => {
                             {/* Main Image */}
                             <div className="relative rounded-3xl overflow-hidden">
                                 <img
-                                    src="/hero-image.jpg"
+                                    src="/HomePage/hero-image.jpg"
                                     alt="Modern tech workstation with dual monitors"
                                     className="w-full h-auto aspect-[4/5] object-cover"
                                 />

@@ -9,8 +9,9 @@ const TeamMember = ({ name, img, socials }) => (
     <div className="group relative">
         {/* Image Container */}
         <div className="relative overflow-hidden rounded-2xl mb-6">
-            <GeneratedImage
-                prompt={img}
+            <img
+                src={img}
+                alt={name}
                 className="w-full aspect-[3/4] object-cover transition-all duration-700 group-hover:scale-105"
             />
 
@@ -55,35 +56,34 @@ export const Team = () => {
     const teamMembers = [
         {
             name: "Ansh Raiyani",
-            img: "Professional headshot of a young Indian male developer, casual smart attire, confident smile, dark background",
+            img: "/team/AnshRaiyani.jpeg",
             socials: { linkedin: "https://www.linkedin.com/in/ansh-raiyani-b33511223/" }
         },
         {
             name: "Aum Patel",
-            img: "Professional portrait of a young Indian male developer, modern style, friendly expression, dark background",
+            img: "/team/AumPatel.jpg",
             socials: { linkedin: "https://www.linkedin.com/in/aum-patel-945561222/" }
         },
         {
             name: "Poojan Prajapati",
-            img: "Portrait of a young Indian male tech professional, smart casual attire, confident pose, dark background",
+            img: "/team/PoojanPrajapati.jpg",
             socials: { linkedin: "https://www.linkedin.com/in/poojan-prajapati-a866082b1/" }
         },
         {
             name: "Kush Rana",
-            img: "Professional headshot of a young Indian male developer, modern attire, warm smile, dark studio background",
+            img: "/team/DevVaghela.jpg", // Placeholder until photo is available
             socials: { linkedin: "https://www.linkedin.com/in/kush-rana-9357b7272/" }
         },
         {
             name: "Dev Vaghela",
-            img: "Portrait of a young Indian male developer, professional look, friendly expression, dark background",
+            img: "/team/DevVaghela.jpg",
             socials: { linkedin: "https://www.linkedin.com/in/dev-vaghela-dev1900/" }
         },
         {
             name: "Yaksh Patel",
-            img: "Professional portrait of a young Indian male developer, casual smart style, confident look, dark background",
+            img: "/team/YakshPatel.jpg",
             socials: { linkedin: "https://www.linkedin.com/in/yaksh-patel-b04875245/" }
         },
-
     ];
 
     return (
