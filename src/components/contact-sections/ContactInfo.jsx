@@ -3,28 +3,24 @@ import { Phone, Mail, MapPin, Clock, Linkedin, Twitter, Instagram } from 'lucide
 const ContactCard = ({ icon: Icon, label, value, href, highlight }) => (
     <a
         href={href}
-        className={`group flex items-start gap-4 p-6 rounded-2xl transition-all duration-300 ${
-            highlight
+        className={`group flex items-start gap-4 p-6 rounded-2xl transition-all duration-300 ${highlight
                 ? 'bg-primary'
                 : 'bg-zinc-900 border border-zinc-800 hover:border-primary/50'
-        }`}
+            }`}
     >
-        <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors ${
-            highlight
+        <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors ${highlight
                 ? 'bg-black/20'
                 : 'bg-zinc-800 group-hover:bg-primary group-hover:text-black'
-        }`}>
+            }`}>
             <Icon className={`w-5 h-5 ${highlight ? 'text-black' : 'text-zinc-400 group-hover:text-black'}`} />
         </div>
         <div>
-            <span className={`text-xs font-bold uppercase tracking-wider block mb-1 ${
-                highlight ? 'text-black/60' : 'text-zinc-500'
-            }`}>
+            <span className={`text-xs font-bold uppercase tracking-wider block mb-1 ${highlight ? 'text-black/60' : 'text-zinc-500'
+                }`}>
                 {label}
             </span>
-            <span className={`text-lg font-semibold block ${
-                highlight ? 'text-black' : 'text-white'
-            }`}>
+            <span className={`text-lg font-semibold block ${highlight ? 'text-black' : 'text-white'
+                }`}>
                 {value}
             </span>
         </div>
@@ -47,21 +43,21 @@ export const ContactInfo = () => (
             <ContactCard
                 icon={Phone}
                 label="Call Us"
-                value="+1 (415) 555-1234"
-                href="tel:+14155551234"
+                value="7862861266, 7600830568"
+                href="tel:7862861266"
                 highlight={true}
             />
             <ContactCard
                 icon={Mail}
                 label="Email Us"
-                value="support@vyaris.com"
-                href="mailto:support@vyaris.com"
+                value="official@vyaris.com"
+                href="mailto:official@vyaris.com"
                 highlight={false}
             />
             <ContactCard
                 icon={MapPin}
                 label="Visit Us"
-                value="123 Creative St, NYC"
+                value="Vadodara, Gujarat"
                 href="#map"
                 highlight={false}
             />

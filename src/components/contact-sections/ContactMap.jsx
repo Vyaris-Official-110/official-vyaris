@@ -10,7 +10,7 @@ export const ContactMap = () => (
                     <h3 className="text-2xl lg:text-3xl font-bold text-white">Find us on the map</h3>
                 </div>
                 <a
-                    href="https://maps.google.com/?q=40.711233,-74.00332"
+                    href="https://maps.google.com/?q=Vadodara,Gujarat"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-900 border border-zinc-800 rounded-full text-white hover:border-primary/50 transition-colors group"
@@ -26,7 +26,7 @@ export const ContactMap = () => (
         <div className="relative h-[500px] lg:h-[600px] w-full">
             {/* Map */}
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48388.929990966964!2d-74.00332!3d40.711233!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1653598669477!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118147.6820202956!2d73.10304561084222!3d22.273630794936494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8ab91a3ddab%3A0xac39d3bfe1473fb8!2sVadodara%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1703666669477!5m2!1sen!2sin"
                 className="w-full h-full border-0 filter grayscale brightness-[0.4] contrast-[1.2]"
                 allowFullScreen=""
                 loading="lazy"
@@ -46,25 +46,21 @@ export const ContactMap = () => (
                         <div>
                             <h4 className="text-lg font-bold text-white mb-1">Vyaris Headquarters</h4>
                             <p className="text-zinc-400 text-sm mb-3">
-                                123 Creative Street<br />
-                                New York, NY 10001
+                                Vadodara, Gujarat<br />
+                                India
                             </p>
-                            <div className="flex items-center gap-2">
-                                <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-                                <span className="text-xs text-zinc-500">Open Mon-Fri, 9AM-6PM</span>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Custom Map Pin Marker */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full pointer-events-none">
+            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full pointer-events-none">
                 <div className="relative">
                     <div className="w-4 h-4 bg-primary rounded-full animate-ping absolute"></div>
                     <div className="w-4 h-4 bg-primary rounded-full relative z-10"></div>
                 </div>
-            </div>
+            </div> */}
         </div>
 
         {/* Bottom Bar */}
@@ -73,18 +69,18 @@ export const ContactMap = () => (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
                     <div>
                         <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">Address</span>
-                        <span className="text-white">123 Creative Street, New York, NY 10001</span>
+                        <span className="text-white">Vadodara, Gujarat, India</span>
                     </div>
                     <div>
                         <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">Phone</span>
-                        <a href="tel:+14155551234" className="text-white hover:text-primary transition-colors">
-                            +1 (415) 555-1234
+                        <a href="tel:7862861266" className="text-white hover:text-primary transition-colors">
+                            7862861266, 7600830568
                         </a>
                     </div>
                     <div>
                         <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">Email</span>
-                        <a href="mailto:support@vyaris.com" className="text-white hover:text-primary transition-colors">
-                            support@vyaris.com
+                        <a href="mailto:official@vyaris.com" className="text-white hover:text-primary transition-colors">
+                            official@vyaris.com
                         </a>
                     </div>
                 </div>
