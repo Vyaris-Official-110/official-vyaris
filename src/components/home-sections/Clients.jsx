@@ -1,17 +1,27 @@
 import React from 'react';
 import { GeneratedImage } from '../ui/GeneratedImage';
 import { ArrowUpRight } from 'lucide-react';
+import sevaLogo from '../../assets/images/seva-logo.png';
+import microAirLogo from '../../assets/images/micro-air-systems-logo.png';
 
-const ClientLogo = ({ i, name, desc }) => (
+const ClientLogo = ({ i, name, desc, logo }) => (
     <div className="group relative bg-zinc-900 border border-zinc-800 flex flex-col items-center justify-center p-8 rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-500 h-full text-center">
         {/* Hover gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
         <div className="h-24 w-full mb-6 flex items-center justify-center relative z-10">
-            <GeneratedImage
-                prompt={`Minimalist logo for ${name}, ${desc}, abstract, vector style, white on transparent`}
-                className="h-full w-auto object-contain opacity-60 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all duration-500"
-            />
+            {logo ? (
+                <img
+                    src={logo}
+                    alt={`${name} logo`}
+                    className="h-full w-auto object-contain transition-all duration-500 bg-white rounded-lg p-2"
+                />
+            ) : (
+                <GeneratedImage
+                    prompt={`Minimalist logo for ${name}, ${desc}, abstract, vector style, white on transparent`}
+                    className="h-full w-auto object-contain opacity-60 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+            )}
         </div>
 
         <h3 className="text-xl font-bold text-white mb-2 relative z-10">{name}</h3>
@@ -23,8 +33,8 @@ const ClientLogo = ({ i, name, desc }) => (
 
 const StatCard = ({ value, label, highlight }) => (
     <div className={`relative p-8 rounded-lg border transition-all duration-300 ${highlight
-            ? 'bg-primary text-black border-primary shadow-lg shadow-primary/20'
-            : 'bg-zinc-900 border-zinc-800 hover:border-primary/50'
+        ? 'bg-primary text-black border-primary shadow-lg shadow-primary/20'
+        : 'bg-zinc-900 border-zinc-800 hover:border-primary/50'
         }`}>
         {/* Decorative corner */}
         {!highlight && (
@@ -40,17 +50,20 @@ const StatCard = ({ value, label, highlight }) => (
     </div>
 );
 
+
 export const Clients = () => {
     const clients = [
         {
             id: 1,
             name: 'Seva Consultancy',
-            desc: 'One of the leading finance consulting firm in Vadodara which provides financial services.'
+            desc: 'One of the leading finance consulting firm in Vadodara which provides financial services.',
+            logo: sevaLogo
         },
         {
             id: 2,
             name: 'Micro Air Systems',
-            desc: 'One of the leading HVAC and retail AC services firm.'
+            desc: 'One of the leading HVAC and retail AC services firm.',
+            logo: microAirLogo
         },
     ];
 
@@ -80,7 +93,7 @@ export const Clients = () => {
                 {/* Logos Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
                     {clients.map(client => (
-                        <ClientLogo key={client.id} i={client.id} name={client.name} desc={client.desc} />
+                        <ClientLogo key={client.id} i={client.id} name={client.name} desc={client.desc} logo={client.logo} />
                     ))}
                 </div>
 
@@ -94,21 +107,21 @@ export const Clients = () => {
                             </div>
                             <h3 className="text-2xl font-bold text-white">Our Impact</h3>
                         </div>
-                        <a
+                        {/* <a
                             href="#portfolio"
                             className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white hover:text-primary transition-colors group"
                         >
                             View Our Work
                             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                        </a>
+                        </a> */}
                     </div>
 
                     {/* Stats Grid */}
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-                        <StatCard value="45+" label="Active Clients" />
-                        <StatCard value="120+" label="Projects Done" highlight />
+                        <StatCard value="5+" label="Active Clients" />
+                        <StatCard value="10+" label="Projects Done" highlight />
                         <StatCard value="98%" label="Client Satisfaction" />
-                        <StatCard value="15+" label="Years Experience" />
+                        <StatCard value="2+" label="Years Experience" />
                     </div>
                 </div>
             </div>

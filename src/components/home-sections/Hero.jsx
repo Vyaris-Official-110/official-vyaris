@@ -21,7 +21,7 @@ export const Hero = () => {
                         {/* Badge */}
                         <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-zinc-900 border border-zinc-800 rounded-full">
                             <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-                            <span className="text-sm font-medium text-zinc-400">Creative Digital Agency</span>
+                            <span className="text-sm font-medium text-zinc-400">Software Development Agency</span>
                         </div>
 
                         {/* Main Heading */}
@@ -45,25 +45,25 @@ export const Hero = () => {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
                             <a
-                                href="#contact"
+                                href="/contact"
                                 className="group inline-flex items-center gap-3 px-8 py-4 bg-primary text-black font-bold uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300"
                             >
                                 Start a Project
                                 <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                             </a>
-                            <a
+                            {/* <a
                                 href="#portfolio"
                                 className="group inline-flex items-center gap-3 px-8 py-4 bg-zinc-900 border border-zinc-800 text-white font-bold uppercase tracking-wider rounded-full hover:border-primary/50 transition-colors duration-300"
                             >
                                 <Play className="w-4 h-4 fill-current" />
                                 View Our Work
-                            </a>
+                            </a> */}
                         </div>
 
                         {/* Stats Row */}
                         <div className="flex flex-wrap items-center gap-8 pt-8 border-t border-zinc-800">
                             <div>
-                                <div className="text-4xl lg:text-5xl font-black text-white">2.5K+</div>
+                                <div className="text-4xl lg:text-5xl font-black text-white">10+</div>
                                 <div className="text-zinc-500 text-sm">Projects Completed</div>
                             </div>
                             <div className="w-px h-12 bg-zinc-800 hidden sm:block"></div>
@@ -73,7 +73,7 @@ export const Hero = () => {
                             </div>
                             <div className="w-px h-12 bg-zinc-800 hidden sm:block"></div>
                             <div>
-                                <div className="text-4xl lg:text-5xl font-black text-white">15+</div>
+                                <div className="text-4xl lg:text-5xl font-black text-white">2+</div>
                                 <div className="text-zinc-500 text-sm">Years Experience</div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@ export const Hero = () => {
                                         <ArrowUpRight className="w-5 h-5 text-black" />
                                     </div>
                                     <div>
-                                        <div className="text-2xl font-black text-white">120+</div>
+                                        <div className="text-2xl font-black text-white">5+</div>
                                         <div className="text-zinc-500 text-xs">Active Clients</div>
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@ export const Hero = () => {
                                         ))}
                                     </div>
                                     <div>
-                                        <div className="text-lg font-bold text-black">50+ Experts</div>
+                                        <div className="text-lg font-bold text-black">6 Experts</div>
                                         <div className="text-black/60 text-xs">Ready to Help</div>
                                     </div>
                                 </div>

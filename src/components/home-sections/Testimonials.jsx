@@ -112,7 +112,7 @@ export const Testimonials = () => {
                                     </div>
                                 </div>
                                 <div className="border-l border-zinc-700 pl-6">
-                                    <div className="text-3xl font-bold text-white">145+</div>
+                                    <div className="text-3xl font-bold text-white">10+</div>
                                     <div className="text-zinc-500 text-sm">Verified Reviews</div>
                                 </div>
                             </div>
@@ -120,31 +120,13 @@ export const Testimonials = () => {
                     </FadeIn>
                 </div>
 
-                {/* Testimonials Slider */}
+                {/* Testimonials Grid */}
                 <FadeIn direction="up">
-                    <Swiper
-                        modules={[Pagination, Autoplay]}
-                        spaceBetween={24}
-                        slidesPerView={1}
-                        breakpoints={{
-                            768: { slidesPerView: 2 },
-                            1280: { slidesPerView: 3 },
-                        }}
-                        autoplay={{ delay: 5000, disableOnInteraction: false }}
-                        pagination={{
-                            clickable: true,
-                            bulletClass: 'swiper-pagination-bullet !w-3 !h-3 !bg-zinc-700 !opacity-100',
-                            bulletActiveClass: '!bg-primary !w-8 !rounded-full',
-                        }}
-                        loop={true}
-                        className="pb-16"
-                    >
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {testimonials.map((testimonial, index) => (
-                            <SwiperSlide key={index} className="!h-auto">
-                                <TestimonialItem {...testimonial} />
-                            </SwiperSlide>
+                            <TestimonialItem key={index} {...testimonial} />
                         ))}
-                    </Swiper>
+                    </div>
                 </FadeIn>
             </div>
         </section>

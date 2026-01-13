@@ -13,56 +13,48 @@ import {
 import { GeneratedImage } from '../components/ui/GeneratedImage';
 
 const ServiceCard = ({ icon: Icon, title, description, features, index, highlighted }) => (
-    <div className={`group relative p-8 lg:p-10 rounded-2xl transition-all duration-500 h-full ${
-        highlighted
-            ? 'bg-primary'
-            : 'bg-zinc-900 border border-zinc-800 hover:border-primary/50'
-    }`}>
+    <div className={`group relative p-8 lg:p-10 rounded-2xl transition-all duration-500 h-full ${highlighted
+        ? 'bg-primary'
+        : 'bg-zinc-900 border border-zinc-800 hover:border-primary/50'
+        }`}>
         {/* Gradient overlay */}
         {!highlighted && (
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
         )}
 
         {/* Number */}
-        <div className={`absolute top-6 right-6 text-6xl font-black ${
-            highlighted ? 'text-black/10' : 'text-zinc-800 group-hover:text-primary/20'
-        } transition-colors`}>
+        <div className={`absolute top-6 right-6 text-6xl font-black ${highlighted ? 'text-black/10' : 'text-zinc-800 group-hover:text-primary/20'
+            } transition-colors`}>
             {String(index).padStart(2, '0')}
         </div>
 
         <div className="relative z-10">
             {/* Icon */}
-            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-all duration-300 ${
-                highlighted
-                    ? 'bg-black/20'
-                    : 'bg-zinc-800 border border-zinc-700 group-hover:bg-primary group-hover:border-primary'
-            }`}>
-                <Icon className={`w-8 h-8 ${
-                    highlighted ? 'text-black' : 'text-zinc-400 group-hover:text-black'
-                } transition-colors`} />
+            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-all duration-300 ${highlighted
+                ? 'bg-black/20'
+                : 'bg-zinc-800 border border-zinc-700 group-hover:bg-primary group-hover:border-primary'
+                }`}>
+                <Icon className={`w-8 h-8 ${highlighted ? 'text-black' : 'text-zinc-400 group-hover:text-black'
+                    } transition-colors`} />
             </div>
 
             {/* Content */}
-            <h3 className={`text-2xl font-bold mb-4 ${
-                highlighted ? 'text-black' : 'text-white group-hover:text-primary'
-            } transition-colors`}>
+            <h3 className={`text-2xl font-bold mb-4 ${highlighted ? 'text-black' : 'text-white group-hover:text-primary'
+                } transition-colors`}>
                 {title}
             </h3>
-            <p className={`mb-6 leading-relaxed ${
-                highlighted ? 'text-black/70' : 'text-zinc-400'
-            }`}>
+            <p className={`mb-6 leading-relaxed ${highlighted ? 'text-black/70' : 'text-zinc-400'
+                }`}>
                 {description}
             </p>
 
             {/* Features */}
             <ul className="space-y-2 mb-8">
                 {features.map((feature, i) => (
-                    <li key={i} className={`flex items-center gap-2 text-sm ${
-                        highlighted ? 'text-black/80' : 'text-zinc-500'
-                    }`}>
-                        <div className={`w-1.5 h-1.5 rounded-full ${
-                            highlighted ? 'bg-black' : 'bg-primary'
-                        }`}></div>
+                    <li key={i} className={`flex items-center gap-2 text-sm ${highlighted ? 'text-black/80' : 'text-zinc-500'
+                        }`}>
+                        <div className={`w-1.5 h-1.5 rounded-full ${highlighted ? 'bg-black' : 'bg-primary'
+                            }`}></div>
                         {feature}
                     </li>
                 ))}
@@ -70,10 +62,9 @@ const ServiceCard = ({ icon: Icon, title, description, features, index, highligh
 
             {/* Link */}
             <a
-                href="#contact"
-                className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-colors ${
-                    highlighted ? 'text-black hover:text-white' : 'text-white hover:text-primary'
-                }`}
+                href="/contact"
+                className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-colors ${highlighted ? 'text-black hover:text-white' : 'text-white hover:text-primary'
+                    }`}
             >
                 Learn More
                 <ArrowRight className="w-4 h-4" />
@@ -106,44 +97,23 @@ export const Expertise = () => {
     const services = [
         {
             icon: Code,
-            title: "Web Development",
-            description: "Custom web applications built with cutting-edge technologies for optimal performance and scalability.",
-            features: ["React & Next.js", "Node.js Backend", "API Development", "Cloud Deployment"],
-            highlighted: false
-        },
-        {
-            icon: Palette,
-            title: "UI/UX Design",
-            description: "User-centered design that combines aesthetics with functionality to create engaging experiences.",
-            features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
+            title: "Custom Software Development",
+            description: "End-to-end software solutions including CRMs, enterprise applications, and automation tools tailored to your business needs.",
+            features: ["CRM Systems", "Enterprise Apps", "Automation Tools", "API Development"],
             highlighted: true
         },
         {
-            icon: Smartphone,
-            title: "Mobile Apps",
-            description: "Native and cross-platform mobile applications for iOS and Android devices.",
-            features: ["React Native", "Flutter", "iOS & Android", "App Store Optimization"],
+            icon: Layers,
+            title: "Web Development",
+            description: "Custom web applications built with cutting-edge technologies for optimal performance and scalability.",
+            features: ["React & Next.js", "Node.js Backend", "E-commerce Platforms", "Cloud Deployment"],
             highlighted: false
         },
         {
             icon: TrendingUp,
-            title: "Digital Marketing",
-            description: "Data-driven marketing strategies to boost your online visibility and drive growth.",
-            features: ["SEO & SEM", "Social Media", "Content Strategy", "Analytics"],
-            highlighted: false
-        },
-        {
-            icon: Layers,
-            title: "Brand Strategy",
-            description: "Comprehensive branding solutions that establish a strong and memorable identity.",
-            features: ["Brand Identity", "Visual Design", "Brand Guidelines", "Messaging"],
-            highlighted: false
-        },
-        {
-            icon: Database,
-            title: "Cloud Solutions",
-            description: "Scalable cloud infrastructure and DevOps practices for modern applications.",
-            features: ["AWS & Azure", "CI/CD Pipelines", "Containerization", "Monitoring"],
+            title: "SEO Optimization",
+            description: "Data-driven SEO strategies to boost your online visibility and drive organic traffic to your platforms.",
+            features: ["Technical SEO", "On-page Optimization", "Content Strategy", "Analytics & Reporting"],
             highlighted: false
         },
     ];
@@ -203,19 +173,19 @@ export const Expertise = () => {
                         {/* Stats */}
                         <div className="grid grid-cols-2 gap-6">
                             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-primary/50 transition-colors">
-                                <div className="text-5xl font-black text-white mb-2">50+</div>
-                                <div className="text-zinc-500 text-sm">Services Offered</div>
+                                <div className="text-5xl font-black text-white mb-2">3</div>
+                                <div className="text-zinc-500 text-sm">Core Services</div>
                             </div>
                             <div className="bg-primary rounded-2xl p-8">
                                 <div className="text-5xl font-black text-black mb-2">98%</div>
                                 <div className="text-black/60 text-sm">Success Rate</div>
                             </div>
                             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-primary/50 transition-colors">
-                                <div className="text-5xl font-black text-white mb-2">15+</div>
+                                <div className="text-5xl font-black text-white mb-2">2+</div>
                                 <div className="text-zinc-500 text-sm">Years Experience</div>
                             </div>
                             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-primary/50 transition-colors">
-                                <div className="text-5xl font-black text-white mb-2">120+</div>
+                                <div className="text-5xl font-black text-white mb-2">10+</div>
                                 <div className="text-zinc-500 text-sm">Projects Delivered</div>
                             </div>
                         </div>

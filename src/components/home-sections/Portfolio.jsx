@@ -6,14 +6,12 @@ import { FadeIn } from '../ui/FadeIn';
 const categories = ['All', 'Branding', 'Development', 'Marketing', 'Design'];
 
 const PortfolioItem = ({ title, category, img, size = 'normal' }) => (
-    <div className={`group relative overflow-hidden rounded-2xl cursor-pointer ${
-        size === 'large' ? 'md:row-span-2' : ''
-    }`}>
+    <div className={`group relative overflow-hidden rounded-2xl cursor-pointer ${size === 'large' ? 'md:row-span-2' : ''
+        }`}>
         <GeneratedImage
             prompt={img}
-            className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
-                size === 'large' ? 'h-full min-h-[500px]' : 'aspect-[4/3]'
-            }`}
+            className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${size === 'large' ? 'h-full min-h-[500px]' : 'aspect-[4/3]'
+                }`}
         />
 
         {/* Overlay */}
@@ -132,11 +130,10 @@ export const Portfolio = () => {
                             <button
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
-                                className={`px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
-                                    activeCategory === cat
+                                className={`px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${activeCategory === cat
                                         ? 'bg-primary text-black'
                                         : 'bg-zinc-900 border border-zinc-800 text-white hover:border-primary/50'
-                                }`}
+                                    }`}
                             >
                                 {cat}
                             </button>
@@ -168,7 +165,7 @@ export const Portfolio = () => {
                                 <p className="text-zinc-500">Let's collaborate and create something amazing together.</p>
                             </div>
                             <a
-                                href="#contact"
+                                href="/contact"
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-black font-bold uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300 group whitespace-nowrap"
                             >
                                 Start Project
