@@ -2,24 +2,30 @@ import React from 'react';
 import { GeneratedImage } from '../ui/GeneratedImage';
 import { ArrowUpRight } from 'lucide-react';
 
-const ClientLogo = ({ i }) => (
-    <div className="group relative bg-zinc-900 border border-zinc-800 h-32 flex items-center justify-center p-6 rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-500">
+const ClientLogo = ({ i, name, desc }) => (
+    <div className="group relative bg-zinc-900 border border-zinc-800 flex flex-col items-center justify-center p-8 rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-500 h-full text-center">
         {/* Hover gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-        <GeneratedImage
-            prompt={`Minimalist company logo ${i}, abstract geometric shape, white on transparent, vector style, clean design`}
-            className="h-full w-auto object-contain opacity-40 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all duration-500 relative z-10"
-        />
+        <div className="h-24 w-full mb-6 flex items-center justify-center relative z-10">
+            <GeneratedImage
+                prompt={`Minimalist logo for ${name}, ${desc}, abstract, vector style, white on transparent`}
+                className="h-full w-auto object-contain opacity-60 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-all duration-500"
+            />
+        </div>
+
+        <h3 className="text-xl font-bold text-white mb-2 relative z-10">{name}</h3>
+        <p className="text-zinc-400 text-sm relative z-10 leading-relaxed max-w-sm">
+            {desc}
+        </p>
     </div>
 );
 
 const StatCard = ({ value, label, highlight }) => (
-    <div className={`relative p-8 rounded-lg border transition-all duration-300 ${
-        highlight
+    <div className={`relative p-8 rounded-lg border transition-all duration-300 ${highlight
             ? 'bg-primary text-black border-primary shadow-lg shadow-primary/20'
             : 'bg-zinc-900 border-zinc-800 hover:border-primary/50'
-    }`}>
+        }`}>
         {/* Decorative corner */}
         {!highlight && (
             <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full"></div>
@@ -36,14 +42,16 @@ const StatCard = ({ value, label, highlight }) => (
 
 export const Clients = () => {
     const clients = [
-        { id: 1, name: 'TechCorp' },
-        { id: 2, name: 'Innovate' },
-        { id: 3, name: 'Quantum' },
-        { id: 4, name: 'Nexus' },
-        { id: 5, name: 'Vertex' },
-        { id: 6, name: 'Cipher' },
-        { id: 7, name: 'Apex' },
-        { id: 8, name: 'Pulse' },
+        {
+            id: 1,
+            name: 'Seva Consultancy',
+            desc: 'One of the leading finance consulting firm in Vadodara which provides financial services.'
+        },
+        {
+            id: 2,
+            name: 'Micro Air Systems',
+            desc: 'One of the leading HVAC and retail AC services firm.'
+        },
     ];
 
     return (
@@ -70,9 +78,9 @@ export const Clients = () => {
                 </div>
 
                 {/* Logos Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
                     {clients.map(client => (
-                        <ClientLogo key={client.id} i={client.id} name={client.name} />
+                        <ClientLogo key={client.id} i={client.id} name={client.name} desc={client.desc} />
                     ))}
                 </div>
 
