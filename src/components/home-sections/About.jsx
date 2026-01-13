@@ -23,10 +23,10 @@ const ServiceListItem = ({ number, title, isActive }) => (
 
 export const About = () => {
     const services = [
-        { number: '01', title: 'Brand Strategy', isActive: false },
-        { number: '02', title: 'Digital Marketing', isActive: true },
-        { number: '03', title: 'Web Development', isActive: false },
-        { number: '04', title: 'Creative Design', isActive: false },
+        { number: '01', title: 'Software Development', isActive: true },
+        { number: '02', title: 'Web Development', isActive: false },
+        { number: '03', title: 'SEO Optimization', isActive: false },
+        { number: '04', title: 'Mobile Application', isActive: false },
     ];
 
     return (
@@ -44,7 +44,7 @@ export const About = () => {
                             <div className="relative rounded-3xl overflow-hidden">
                                 <img
                                     src="/HomePage/about-image.jpg"
-                                    alt="Creative Agency Illustration"
+                                    alt="About Vyaris - Software Development"
                                     className="w-full h-auto"
                                 />
                                 {/* Gradient Overlay */}
@@ -58,16 +58,16 @@ export const About = () => {
                                         <Play className="w-6 h-6 text-black fill-black ml-1" />
                                     </div>
                                     <div>
-                                        <div className="text-3xl font-black text-white">15+</div>
+                                        <div className="text-3xl font-black text-white">2+</div>
                                         <div className="text-zinc-500 text-sm">Years Experience</div>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Decorative Badge */}
-                            <div className="absolute -top-4 -left-4 lg:-left-8 bg-zinc-900 border border-zinc-800 rounded-full px-6 py-3">
-                                <span className="text-primary font-bold text-sm uppercase tracking-wider">Since 2009</span>
-                            </div>
+                            {/* <div className="absolute -top-4 -left-4 lg:-left-8 bg-zinc-900 border border-zinc-800 rounded-full px-6 py-3">
+                                <span className="text-primary font-bold text-sm uppercase tracking-wider">Since 2026</span>
+                            </div> */}
                         </div>
                     </div>
 
@@ -78,11 +78,11 @@ export const About = () => {
                             <div className="space-y-6">
                                 <h4 className="text-primary font-bold uppercase tracking-widest">About Us</h4>
                                 <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                                    Best creative & <br />
-                                    <span className="hollow-text">digital agency</span>
+                                    Your Trusted <br />
+                                    <span className="hollow-text">Software Partner</span>
                                 </h2>
                                 <p className="text-zinc-400 text-base lg:text-lg leading-relaxed max-w-xl">
-                                    We transform ideas into exceptional digital experiences. Our team combines creativity with technical expertise to deliver solutions that drive growth and make lasting impressions.
+                                    We build software that powers businesses. From custom CRMs and web applications to SEO-optimized websites, our team delivers scalable solutions that drive real results.
                                 </p>
                             </div>
 
@@ -101,19 +101,19 @@ export const About = () => {
                             {/* CTA */}
                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
                                 <a
-                                    href="#contact"
+                                    href="/contact"
                                     className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-black font-bold uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300 group"
                                 >
                                     Start a Project
                                     <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                                 </a>
-                                <a
+                                {/* <a
                                     href="#portfolio"
                                     className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white hover:text-primary transition-colors group"
                                 >
                                     View Our Work
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>

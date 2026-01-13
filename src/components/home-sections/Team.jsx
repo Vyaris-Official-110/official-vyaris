@@ -40,9 +40,9 @@ const TeamMember = ({ name, img, socials }) => (
             </div>
 
             {/* Corner Badge */}
-            <div className="absolute top-4 right-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-50 group-hover:scale-100">
+            {/* <div className="absolute top-4 right-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-50 group-hover:scale-100">
                 <ArrowUpRight className="w-5 h-5 text-black" />
-            </div>
+            </div> */}
         </div>
 
         {/* Info */}
@@ -103,18 +103,9 @@ export const Team = () => {
                     </FadeIn>
 
                     <FadeIn direction="left" className="flex items-end lg:justify-end">
-                        <div className="max-w-md">
-                            <p className="text-zinc-400 text-base lg:text-lg leading-relaxed mb-6">
-                                Our talented team brings together diverse expertise and creative vision to deliver exceptional results.
-                            </p>
-                            <a
-                                href="#careers"
-                                className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white hover:text-primary transition-colors group"
-                            >
-                                Join Our Team
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </a>
-                        </div>
+                        <p className="text-zinc-400 text-base lg:text-lg leading-relaxed">
+                            Our talented team brings together diverse expertise and creative vision to deliver exceptional results.
+                        </p>
                     </FadeIn>
                 </div>
 
@@ -146,24 +137,7 @@ export const Team = () => {
                     </Swiper>
                 </FadeIn>
 
-                {/* Bottom CTA */}
-                <div className="mt-20 pt-12 border-t border-zinc-800">
-                    <FadeIn direction="up">
-                        <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
-                            <div>
-                                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Want to join our team?</h3>
-                                <p className="text-zinc-500">We're always looking for talented individuals to join our growing team.</p>
-                            </div>
-                            <a
-                                href="#careers"
-                                className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-black font-bold uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300 group"
-                            >
-                                View Open Positions
-                                <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                            </a>
-                        </div>
-                    </FadeIn>
-                </div>
+
             </div>
         </section>
     );

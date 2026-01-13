@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const ContactCard = ({ icon: Icon, label, value, href, highlight }) => (
     <a
@@ -43,8 +43,8 @@ export const ContactInfo = () => (
             <ContactCard
                 icon={Phone}
                 label="Call Us"
-                value="7862861266, 7600830568"
-                href="tel:7862861266"
+                value="+91-7862861266, +91-7600830568"
+                href="tel:+917862861266"
                 highlight={true}
             />
             <ContactCard
@@ -61,34 +61,9 @@ export const ContactInfo = () => (
                 href="#map"
                 highlight={false}
             />
-            <ContactCard
-                icon={Clock}
-                label="Working Hours"
-                value="Mon - Fri, 9AM - 6PM"
-                href="#"
-                highlight={false}
-            />
+
         </div>
 
-        {/* Social Links */}
-        <div className="mt-auto pt-8 border-t border-zinc-800">
-            <span className="text-sm text-zinc-500 block mb-4">Follow us on social media</span>
-            <div className="flex gap-3">
-                {[
-                    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                    { icon: Twitter, href: '#', label: 'Twitter' },
-                    { icon: Instagram, href: '#', label: 'Instagram' },
-                ].map((social, i) => (
-                    <a
-                        key={i}
-                        href={social.href}
-                        aria-label={social.label}
-                        className="group w-12 h-12 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-primary hover:border-primary hover:text-black transition-all duration-300"
-                    >
-                        <social.icon className="w-5 h-5" />
-                    </a>
-                ))}
-            </div>
-        </div>
+
     </div>
 );

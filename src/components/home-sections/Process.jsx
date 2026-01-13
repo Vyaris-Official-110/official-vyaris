@@ -106,7 +106,7 @@ export const Process = () => {
                             <p className="text-zinc-500">Let's discuss how we can help bring your vision to reality.</p>
                         </div>
                         <a
-                            href="#contact"
+                            href="/contact"
                             className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-black font-bold uppercase tracking-wider rounded-full hover:bg-white transition-colors duration-300 group"
                         >
                             Get Started

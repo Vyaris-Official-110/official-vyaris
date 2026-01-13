@@ -3,8 +3,8 @@ import { ArrowRight, ArrowUpRight, BarChart, Smartphone, PenTool, Cpu, Layers, G
 
 const ServiceItem = ({ icon: Icon, title, desc, number, isHighlighted }) => (
     <div className={`group relative p-8 lg:p-10 rounded-2xl transition-all duration-500 h-full ${isHighlighted
-            ? 'bg-primary'
-            : 'bg-zinc-900 border border-zinc-800 hover:border-primary/50'
+        ? 'bg-primary'
+        : 'bg-zinc-900 border border-zinc-800 hover:border-primary/50'
         }`}>
         {/* Gradient overlay */}
         {!isHighlighted && (
@@ -20,8 +20,8 @@ const ServiceItem = ({ icon: Icon, title, desc, number, isHighlighted }) => (
         <div className="relative z-10">
             {/* Icon */}
             <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-all duration-300 ${isHighlighted
-                    ? 'bg-black/20'
-                    : 'bg-zinc-800 border border-zinc-700 group-hover:bg-primary group-hover:border-primary'
+                ? 'bg-black/20'
+                : 'bg-zinc-800 border border-zinc-700 group-hover:bg-primary group-hover:border-primary'
                 }`}>
                 <Icon className={`w-8 h-8 transition-colors duration-300 ${isHighlighted ? 'text-black' : 'text-zinc-400 group-hover:text-black'
                     }`} />
@@ -37,10 +37,10 @@ const ServiceItem = ({ icon: Icon, title, desc, number, isHighlighted }) => (
 
             {/* Link */}
             <a
-                href="#"
+                href="/expertise"
                 className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-colors group/link ${isHighlighted
-                        ? 'text-black hover:text-white'
-                        : 'text-white hover:text-primary'
+                    ? 'text-black hover:text-white'
+                    : 'text-white hover:text-primary'
                     }`}
             >
                 Learn More
@@ -54,30 +54,23 @@ export const Services = () => {
     const services = [
         {
             icon: Smartphone,
-            title: "Web & Mobile Apps",
-            desc: "Expert MERN stack, Next.js, and React Native development for high-performance websites and mobile applications.",
+            title: "Custom Software Development",
+            desc: "End-to-end software solutions including CRMs, enterprise applications, and automation tools tailored to your business needs.",
             number: "01",
             isHighlighted: true
         },
         {
             icon: Layers,
-            title: "CRM & Enterprise",
-            desc: "Custom CRM solutions and enterprise web applications tailored to streamline your business operations.",
+            title: "Web Development",
+            desc: "Expert MERN stack, Next.js development for high-performance websites, web applications, and e-commerce platforms.",
             number: "02",
-            isHighlighted: false
-        },
-        {
-            icon: Cpu,
-            title: "Cloud Support",
-            desc: "Reliable cloud infrastructure management and deployment support to ensure your applications are always available.",
-            number: "03",
             isHighlighted: false
         },
         {
             icon: BarChart,
             title: "SEO Optimization",
             desc: "Data-driven SEO strategies to improve your search rankings and drive organic traffic to your digital platforms.",
-            number: "04",
+            number: "03",
             isHighlighted: false
         },
     ];
@@ -103,7 +96,7 @@ export const Services = () => {
                                 We offer comprehensive digital services tailored to transform your business and accelerate growth in the digital landscape.
                             </p>
                             <a
-                                href="#contact"
+                                href="/expertise"
                                 className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white hover:text-primary transition-colors group"
                             >
                                 View All Services
@@ -114,7 +107,7 @@ export const Services = () => {
                 </div>
 
                 {/* Services Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {services.map((service, index) => (
                         <ServiceItem
                             key={index}
@@ -130,29 +123,29 @@ export const Services = () => {
                 {/* Bottom Stats */}
                 <div className="mt-20 pt-12 border-t border-zinc-800">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="text-center lg:text-left">
-                            <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                        <div className="text-center">
+                            <div className="flex items-center justify-center gap-3 mb-2">
                                 <Layers className="w-6 h-6 text-primary" />
-                                <span className="text-4xl font-black text-white">50+</span>
+                                <span className="text-4xl font-black text-white">3</span>
                             </div>
-                            <span className="text-zinc-500 text-sm">Services Offered</span>
+                            <span className="text-zinc-500 text-sm">Core Services</span>
                         </div>
-                        <div className="text-center lg:text-left">
-                            <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                        <div className="text-center">
+                            <div className="flex items-center justify-center gap-3 mb-2">
                                 <Globe className="w-6 h-6 text-primary" />
-                                <span className="text-4xl font-black text-white">25+</span>
+                                <span className="text-4xl font-black text-white">2+</span>
                             </div>
-                            <span className="text-zinc-500 text-sm">Countries Served</span>
+                            <span className="text-zinc-500 text-sm">Cities Served</span>
                         </div>
-                        <div className="text-center lg:text-left">
-                            <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                        <div className="text-center">
+                            <div className="flex items-center justify-center gap-3 mb-2">
                                 <BarChart className="w-6 h-6 text-primary" />
                                 <span className="text-4xl font-black text-white">95%</span>
                             </div>
                             <span className="text-zinc-500 text-sm">Success Rate</span>
                         </div>
-                        <div className="text-center lg:text-left">
-                            <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                        <div className="text-center">
+                            <div className="flex items-center justify-center gap-3 mb-2">
                                 <Cpu className="w-6 h-6 text-primary" />
                                 <span className="text-4xl font-black text-white">24/7</span>
                             </div>

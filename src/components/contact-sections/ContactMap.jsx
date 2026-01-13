@@ -73,8 +73,8 @@ export const ContactMap = () => (
                     </div>
                     <div>
                         <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">Phone</span>
-                        <a href="tel:7862861266" className="text-white hover:text-primary transition-colors">
-                            7862861266, 7600830568
+                        <a href="tel:+917862861266" className="text-white hover:text-primary transition-colors">
+                            +91-7862861266, +91-7600830568
                         </a>
                     </div>
                     <div>

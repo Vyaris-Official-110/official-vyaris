@@ -45,8 +45,8 @@ export const ContactHero = () => (
                         official@vyaris.com
                     </a>
                     <div className="hidden lg:block w-px h-6 bg-zinc-800"></div>
-                    <a href="tel:7862861266" className="text-zinc-400 hover:text-primary transition-colors">
-                        7862861266, 7600830568
+                    <a href="tel:+917862861266" className="text-zinc-400 hover:text-primary transition-colors">
+                        +91-7862861266, +91-7600830568
                     </a>
                 </div>
             </div>

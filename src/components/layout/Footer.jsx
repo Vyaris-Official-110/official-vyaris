@@ -20,12 +20,7 @@ export const Footer = () => (
                         </div>
                     </div>
 
-                    <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
-                        <input type="email" placeholder="Your Email" className="bg-zinc-900 border border-zinc-800 text-white px-4 py-2 w-full focus:border-primary outline-none rounded-sm" />
-                        <button type="submit" className="bg-primary text-black px-4 rounded-sm hover:bg-white transition-colors cursor-pointer">
-                            <ArrowRight size={18} />
-                        </button>
-                    </form>
+
                 </div>
 
                 {/* Column 2: Useful Links */}
@@ -33,12 +28,10 @@ export const Footer = () => (
                     <h4 className="text-lg font-bold mb-8">Useful Links</h4>
                     <ul className="space-y-3">
                         {[
-                            { label: 'About Us', path: '/' },
-                            { label: 'Contact', path: '/contact' },
-                            { label: 'FAQS', path: null },
-                            { label: 'Services', path: '/expertise' },
-                            { label: 'Term & Conditions', path: null },
-                            { label: 'Privacy Policy', path: null }
+                            { label: 'Home', path: '/' },
+                            { label: 'Expertise', path: '/expertise' },
+                            { label: 'Team', path: '/team' },
+                            { label: 'Contact', path: '/contact' }
                         ].map((item, index) => (
                             <li key={index}>
                                 {item.path ? (
@@ -61,23 +54,23 @@ export const Footer = () => (
                     <h4 className="text-lg font-bold mb-8">Contact Us</h4>
                     <div className="space-y-4">
                         <a href="mailto:official@vyaris.com" className="block text-zinc-500 hover:text-primary transition-colors">official@vyaris.com</a>
-                        <a href="tel:7862861266" className="block text-zinc-500 hover:text-primary transition-colors">7862861266</a>
-                        <a href="tel:7600830568" className="block text-zinc-500 hover:text-primary transition-colors">7600830568</a>
+                        <a href="tel:+917862861266" className="block text-zinc-500 hover:text-primary transition-colors">+91-7862861266</a>
+                        <a href="tel:+917600830568" className="block text-zinc-500 hover:text-primary transition-colors">+91-7600830568</a>
                     </div>
                 </div>
             </div>
 
             <div className="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className="flex gap-4">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-zinc-900 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-colors rounded-full">
+                    {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-zinc-900 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-colors rounded-full">
                         <Facebook size={18} />
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-zinc-900 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-colors rounded-full">
+                    </a> */}
+                    <a href="https://www.linkedin.com/company/vyarisofficial/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-zinc-900 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-colors rounded-full">
                         <Linkedin size={18} />
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-zinc-900 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-colors rounded-full">
+                    {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-zinc-900 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-colors rounded-full">
                         <Twitter size={18} />
-                    </a>
+                    </a> */}
                 </div>
 
                 <p className="text-zinc-600 text-sm">Copyright © 2025 Vyaris. All Rights Reserved</p>
