@@ -41,8 +41,8 @@ export const ContactHero = () => (
                         <span className="text-white font-medium">Available for new projects</span>
                     </div>
                     <div className="hidden lg:block w-px h-6 bg-zinc-800"></div>
-                    <a href="mailto:hello@vyaris.com" className="text-zinc-400 hover:text-primary transition-colors">
-                        hello@vyaris.com
+                    <a href="mailto:support@vyaris.com" className="text-zinc-400 hover:text-primary transition-colors">
+                        support@vyaris.com
                     </a>
                     <div className="hidden lg:block w-px h-6 bg-zinc-800"></div>
                     <a href="tel:+14155551234" className="text-zinc-400 hover:text-primary transition-colors">

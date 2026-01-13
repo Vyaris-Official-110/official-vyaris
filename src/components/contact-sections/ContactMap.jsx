@@ -83,8 +83,8 @@ export const ContactMap = () => (
                     </div>
                     <div>
                         <span className="text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">Email</span>
-                        <a href="mailto:hello@vyaris.com" className="text-white hover:text-primary transition-colors">
-                            hello@vyaris.com
+                        <a href="mailto:support@vyaris.com" className="text-white hover:text-primary transition-colors">
+                            support@vyaris.com
                         </a>
                     </div>
                 </div>

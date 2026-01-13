@@ -5,23 +5,19 @@ import { ArrowRight, ArrowUpRight, Play } from 'lucide-react';
 const ServiceListItem = ({ number, title, isActive }) => (
     <a
         href="#services"
-        className={`group flex items-center gap-5 px-8 py-6 rounded-2xl transition-all duration-300 ${
-            isActive
+        className={`group flex items-center gap-5 px-8 py-6 rounded-2xl transition-all duration-300 ${isActive
                 ? 'bg-primary shadow-lg shadow-primary/20'
                 : 'bg-zinc-900 border border-zinc-800 hover:border-primary/50'
-        }`}
+            }`}
     >
         <div className="flex-shrink-0">
-            <ArrowRight className={`w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 ${
-                isActive ? 'text-black' : 'text-white/70'
-            }`} />
+            <ArrowRight className={`w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 ${isActive ? 'text-black' : 'text-white/70'
+                }`} />
         </div>
-        <span className={`text-2xl font-bold min-w-[3rem] ${
-            isActive ? 'text-black/50' : 'text-zinc-700'
-        }`}>{number}</span>
-        <span className={`text-lg font-semibold ${
-            isActive ? 'text-black' : 'text-white'
-        }`}>{title}</span>
+        <span className={`text-2xl font-bold min-w-[3rem] ${isActive ? 'text-black/50' : 'text-zinc-700'
+            }`}>{number}</span>
+        <span className={`text-lg font-semibold ${isActive ? 'text-black' : 'text-white'
+            }`}>{title}</span>
     </a>
 );
 
@@ -46,8 +42,8 @@ export const About = () => {
                         <div className="relative">
                             {/* Main Image */}
                             <div className="relative rounded-3xl overflow-hidden">
-                                <GeneratedImage
-                                    prompt="Abstract 3D sphere with flowing metallic ribbons wrapped around it, dark moody background, professional studio lighting, cinematic, high contrast, neon green accent lighting"
+                                <img
+                                    src="/about-image.jpg"
                                     alt="Creative Agency Illustration"
                                     className="w-full h-auto"
                                 />
