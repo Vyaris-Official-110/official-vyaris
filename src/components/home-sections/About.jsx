@@ -6,8 +6,8 @@ const ServiceListItem = ({ number, title, isActive }) => (
     <a
         href="#services"
         className={`group flex items-center gap-5 px-8 py-6 rounded-2xl transition-all duration-300 ${isActive
-                ? 'bg-primary shadow-lg shadow-primary/20'
-                : 'bg-zinc-900 border border-zinc-800 hover:border-primary/50'
+            ? 'bg-primary shadow-lg shadow-primary/20'
+            : 'bg-zinc-900 border border-zinc-800 hover:border-primary/50'
             }`}
     >
         <div className="flex-shrink-0">
@@ -43,7 +43,7 @@ export const About = () => {
                             {/* Main Image */}
                             <div className="relative rounded-3xl overflow-hidden">
                                 <img
-                                    src="/about-image.jpg"
+                                    src="/HomePage/about-image.jpg"
                                     alt="Creative Agency Illustration"
                                     className="w-full h-auto"
                                 />
