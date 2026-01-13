@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import { GeneratedImage } from '../ui/GeneratedImage';
@@ -6,7 +5,7 @@ import { Linkedin, Twitter, Instagram, ArrowRight, ArrowUpRight } from 'lucide-r
 import { FadeIn } from '../ui/FadeIn';
 import 'swiper/css';
 
-const TeamMember = ({ name, role, img, socials }) => (
+const TeamMember = ({ name, img, socials }) => (
     <div className="group relative">
         {/* Image Container */}
         <div className="relative overflow-hidden rounded-2xl mb-6">
@@ -48,69 +47,44 @@ const TeamMember = ({ name, role, img, socials }) => (
         {/* Info */}
         <div className="relative">
             <h4 className="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">{name}</h4>
-            <span className="text-zinc-500 text-sm">{role}</span>
         </div>
     </div>
 );
 
-const departments = [
-    { id: 'all', label: 'All Team', count: '12' },
-    { id: 'leadership', label: 'Leadership', count: '3' },
-    { id: 'design', label: 'Design Team', count: '4' },
-    { id: 'development', label: 'Development', count: '5' },
-];
-
 export const Team = () => {
-    const [activeDept, setActiveDept] = useState('all');
-
     const teamMembers = [
         {
-            name: "James Baker",
-            role: "CEO & Founder",
-            department: "leadership",
-            img: "Professional headshot of a confident CEO, dark suit, warm smile, studio lighting, dark background",
-            socials: { linkedin: "#", twitter: "#", instagram: "#" }
+            name: "Ansh Raiyani",
+            img: "Professional headshot of a young Indian male developer, casual smart attire, confident smile, dark background",
+            socials: { linkedin: "https://www.linkedin.com/in/ansh-raiyani-b33511223/" }
         },
         {
-            name: "Sarah Chen",
-            role: "Creative Director",
-            department: "leadership",
-            img: "Professional portrait of an Asian businesswoman, creative director, stylish attire, confident pose, dark background",
-            socials: { linkedin: "#", twitter: "#" }
+            name: "Aum Patel",
+            img: "Professional portrait of a young Indian male developer, modern style, friendly expression, dark background",
+            socials: { linkedin: "https://www.linkedin.com/in/aum-patel-945561222/" }
         },
         {
-            name: "Michael Torres",
-            role: "Lead Developer",
-            department: "development",
-            img: "Portrait of a tech professional, casual smart attire, glasses, friendly expression, dark background",
-            socials: { linkedin: "#", twitter: "#" }
+            name: "Poojan Prajapati",
+            img: "Portrait of a young Indian male tech professional, smart casual attire, confident pose, dark background",
+            socials: { linkedin: "https://www.linkedin.com/in/poojan-prajapati-a866082b1/" }
         },
         {
-            name: "Emily Rodriguez",
-            role: "UI/UX Designer",
-            department: "design",
-            img: "Creative portrait of a young woman designer, artistic vibe, colorful accessories, dark background",
-            socials: { linkedin: "#", instagram: "#" }
+            name: "Kush Rana",
+            img: "Professional headshot of a young Indian male developer, modern attire, warm smile, dark studio background",
+            socials: { linkedin: "https://www.linkedin.com/in/kush-rana-9357b7272/" }
         },
         {
-            name: "David Kim",
-            role: "Marketing Head",
-            department: "leadership",
-            img: "Professional headshot of a marketing executive, sharp suit, confident look, dark studio background",
-            socials: { linkedin: "#", twitter: "#" }
+            name: "Dev Vaghela",
+            img: "Portrait of a young Indian male developer, professional look, friendly expression, dark background",
+            socials: { linkedin: "https://www.linkedin.com/in/dev-vaghela-dev1900/" }
         },
         {
-            name: "Anna Schmidt",
-            role: "Senior Designer",
-            department: "design",
-            img: "Portrait of a creative professional woman, modern style, artistic background, studio lighting",
-            socials: { linkedin: "#", instagram: "#" }
+            name: "Yaksh Patel",
+            img: "Professional portrait of a young Indian male developer, casual smart style, confident look, dark background",
+            socials: { linkedin: "https://www.linkedin.com/in/yaksh-patel-b04875245/" }
         },
-    ];
 
-    const filteredMembers = activeDept === 'all'
-        ? teamMembers
-        : teamMembers.filter(m => m.department === activeDept);
+    ];
 
     return (
         <section id="team" className="py-24 lg:py-32 bg-zinc-950 relative overflow-hidden">
@@ -144,32 +118,10 @@ export const Team = () => {
                     </FadeIn>
                 </div>
 
-                {/* Department Tabs */}
-                <FadeIn direction="up" className="mb-12">
-                    <div className="flex flex-wrap gap-3">
-                        {departments.map((dept) => (
-                            <button
-                                key={dept.id}
-                                onClick={() => setActiveDept(dept.id)}
-                                className={`px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 ${
-                                    activeDept === dept.id
-                                        ? 'bg-primary text-black'
-                                        : 'bg-zinc-900 border border-zinc-800 text-white hover:border-primary/50'
-                                }`}
-                            >
-                                {dept.label}
-                                <span className={`text-xs px-2 py-0.5 rounded-full ${
-                                    activeDept === dept.id ? 'bg-black/20' : 'bg-zinc-800'
-                                }`}>
-                                    {dept.count}
-                                </span>
-                            </button>
-                        ))}
-                    </div>
-                </FadeIn>
+
 
                 {/* Team Grid/Slider */}
-                <FadeIn direction="up" key={activeDept}>
+                <FadeIn direction="up">
                     <Swiper
                         modules={[Autoplay]}
                         spaceBetween={24}
@@ -180,13 +132,12 @@ export const Team = () => {
                             1280: { slidesPerView: 4 },
                         }}
                         autoplay={{ delay: 4000, disableOnInteraction: false }}
-                        loop={filteredMembers.length > 4}
+                        loop={teamMembers.length > 4}
                     >
-                        {filteredMembers.map((member, index) => (
+                        {teamMembers.map((member, index) => (
                             <SwiperSlide key={index}>
                                 <TeamMember
                                     name={member.name}
-                                    role={member.role}
                                     img={member.img}
                                     socials={member.socials}
                                 />

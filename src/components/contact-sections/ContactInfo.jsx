@@ -54,8 +54,8 @@ export const ContactInfo = () => (
             <ContactCard
                 icon={Mail}
                 label="Email Us"
-                value="hello@vyaris.com"
-                href="mailto:hello@vyaris.com"
+                value="support@vyaris.com"
+                href="mailto:support@vyaris.com"
                 highlight={false}
             />
             <ContactCard

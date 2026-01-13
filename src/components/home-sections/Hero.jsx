@@ -84,8 +84,9 @@ export const Hero = () => {
                         <div className="relative">
                             {/* Main Image */}
                             <div className="relative rounded-3xl overflow-hidden">
-                                <GeneratedImage
-                                    prompt="Modern abstract 3D sculpture with flowing metallic ribbons, professional studio photography, dark background with neon green accent lighting, cinematic, high contrast"
+                                <img
+                                    src="/hero-image.jpg"
+                                    alt="Modern tech workstation with dual monitors"
                                     className="w-full h-auto aspect-[4/5] object-cover"
                                 />
                                 {/* Gradient Overlay */}
