@@ -67,35 +67,19 @@ export const Testimonials = () => {
     const testimonials = [
         {
             rating: "5.0",
-            text: "Working with Vyaris transformed our digital presence completely. Their strategic approach and creative execution exceeded all expectations.",
-            name: "Michel Dark",
-            role: "CEO",
-            company: "TechVentures",
-            img: "Professional headshot of a confident businessman, dark suit, neutral background, studio lighting"
-        },
-        {
-            rating: "4.9",
-            text: "The team's attention to detail and commitment to excellence made all the difference. They truly understood our vision and brought it to life.",
-            name: "Sarah Chen",
-            role: "Marketing Director",
-            company: "InnovateCo",
-            img: "Professional portrait of an Asian businesswoman, modern office background, warm lighting"
+            text: "Vyaris developed a comprehensive Website and CRM for us that perfectly streamlined our operations. Their understanding of our finance consulting needs was exceptional.",
+            name: "Bharat Rana",
+            role: "CEO and Founder",
+            company: "Seva Consultancy",
+            img: "Professional headshot of an Indian businessman, formal suit, office background"
         },
         {
             rating: "5.0",
-            text: "Exceptional creativity combined with technical expertise. Vyaris delivered a solution that perfectly aligned with our brand identity.",
-            name: "James Wilson",
-            role: "Creative Director",
-            company: "DesignHub",
-            img: "Creative professional portrait, artistic lighting, casual business attire"
-        },
-        {
-            rating: "4.8",
-            text: "From concept to execution, the entire process was seamless. Their proactive communication and expert guidance made collaboration effortless.",
-            name: "Emily Rodriguez",
-            role: "Founder",
-            company: "StartupX",
-            img: "Young entrepreneur portrait, confident smile, modern workspace background"
+            text: "The Website and CRM solution provided by Vyaris has significantly improved our efficiency. An excellent partner for HVAC and retail AC service businesses.",
+            name: "Paresh Prajapati",
+            role: "CEO",
+            company: "Micro Air Systems",
+            img: "Professional portrait of a business owner, manufacturing or industrial background, confident smile"
         },
     ];
 

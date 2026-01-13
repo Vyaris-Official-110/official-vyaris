@@ -39,7 +39,7 @@ export const Hero = () => {
 
                         {/* Description */}
                         <p className="text-zinc-400 text-lg lg:text-xl leading-relaxed max-w-xl">
-                            We transform ideas into exceptional digital experiences. Branding, marketing, design, and digital strategies that resonate with your audience.
+                            We transform ideas into exceptional digital experiences. Specializing in Websites, CRMs, Mobile Apps, and Cloud Solutions using MERN, Next.js, and React Native.
                         </p>
 
                         {/* CTA Buttons */}
