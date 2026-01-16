@@ -51,7 +51,7 @@ export const Navbar = () => {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-zinc-950/90 backdrop-blur-md py-4 border-b border-zinc-800' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
           <Link to="/" onClick={handleNavClick} className="flex items-center gap-2">
-             <img src="/assets/img/logo-light.png" alt="Vyaris" className="h-10 hidden" /> 
+             {/* <img src="/assets/img/logo-light.png" alt="Vyaris" className="h-10 hidden" />  */}
              {/* Fallback Logo if image missing */}
              <div className="text-2xl font-bold tracking-tighter uppercase text-white flex items-center gap-2">
                <div className="w-2 h-8 bg-primary"></div>
