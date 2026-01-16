@@ -137,8 +137,8 @@ export const Navbar = () => {
 
                   <div>
                       <h4 className="text-white font-bold uppercase tracking-wider mb-4 border-b border-zinc-800 pb-2">Address</h4>
-                      <p className="text-zinc-400">California, TX 70240</p>
-                      <p className="text-zinc-400 mt-2">support@validtheme.com</p>
+                      <p className="text-zinc-400">Vadodara, Gujarat</p>
+                      <p className="text-zinc-400 mt-2">official@vyaris.com</p>
                   </div>
                   
                   <div className="pt-4">
