@@ -2,6 +2,7 @@ import React from 'react';
 import { Hero } from '../components/home-sections/Hero';
 import { About } from '../components/home-sections/About';
 import { Services } from '../components/home-sections/Services';
+import ServiceMarquee from '../components/home-sections/ServiceMarquee';
 import { Portfolio } from '../components/home-sections/Portfolio';
 import { Team } from '../components/home-sections/Team';
 import { Testimonials } from '../components/home-sections/Testimonials';
@@ -25,10 +26,13 @@ export const Home = () => {
       {/* 4. Services Section */}
       <Services />
 
-      {/* 5. Portfolio/Projects Section */}
+      {/* 5. Service Marquee */}
+      <ServiceMarquee />
+
+      {/* 6. Portfolio/Projects Section */}
       {/* <Portfolio /> */}
 
-      {/* 6. Team Section */}
+      {/* 7. Team Section */}
       <Team />
 
       {/* 7. Testimonials Section */}
