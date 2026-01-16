@@ -2,53 +2,46 @@ import React from 'react';
 import { ArrowRight, ArrowUpRight, BarChart, Smartphone, PenTool, Cpu, Layers, Globe } from 'lucide-react';
 
 const ServiceItem = ({ icon: Icon, title, desc, number, isHighlighted }) => (
-    <div className={`group relative p-8 lg:p-10 rounded-2xl transition-all duration-500 h-full ${
-        isHighlighted
-            ? 'bg-primary'
-            : 'bg-zinc-900 border border-zinc-800 hover:border-primary/50'
-    }`}>
+    <div className={`group relative p-8 lg:p-10 rounded-2xl transition-all duration-500 h-full ${isHighlighted
+        ? 'bg-primary'
+        : 'bg-zinc-900 border border-zinc-800 hover:border-primary/50'
+        }`}>
         {/* Gradient overlay */}
         {!isHighlighted && (
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
         )}
 
         {/* Number badge */}
-        <div className={`absolute top-6 right-6 text-6xl font-black transition-colors duration-300 ${
-            isHighlighted ? 'text-black/10' : 'text-zinc-800 group-hover:text-primary/20'
-        }`}>
+        <div className={`absolute top-6 right-6 text-6xl font-black transition-colors duration-300 ${isHighlighted ? 'text-black/10' : 'text-zinc-800 group-hover:text-primary/20'
+            }`}>
             {number}
         </div>
 
         <div className="relative z-10">
             {/* Icon */}
-            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-all duration-300 ${
-                isHighlighted
-                    ? 'bg-black/20'
-                    : 'bg-zinc-800 border border-zinc-700 group-hover:bg-primary group-hover:border-primary'
-            }`}>
-                <Icon className={`w-8 h-8 transition-colors duration-300 ${
-                    isHighlighted ? 'text-black' : 'text-zinc-400 group-hover:text-black'
-                }`} />
+            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-all duration-300 ${isHighlighted
+                ? 'bg-black/20'
+                : 'bg-zinc-800 border border-zinc-700 group-hover:bg-primary group-hover:border-primary'
+                }`}>
+                <Icon className={`w-8 h-8 transition-colors duration-300 ${isHighlighted ? 'text-black' : 'text-zinc-400 group-hover:text-black'
+                    }`} />
             </div>
 
             {/* Content */}
-            <h3 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
-                isHighlighted ? 'text-black' : 'text-white group-hover:text-primary'
-            }`}>{title}</h3>
-            <p className={`mb-8 leading-relaxed ${
-                isHighlighted ? 'text-black/70' : 'text-zinc-400'
-            }`}>
+            <h3 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${isHighlighted ? 'text-black' : 'text-white group-hover:text-primary'
+                }`}>{title}</h3>
+            <p className={`mb-8 leading-relaxed ${isHighlighted ? 'text-black/70' : 'text-zinc-400'
+                }`}>
                 {desc}
             </p>
 
             {/* Link */}
             <a
-                href="#"
-                className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-colors group/link ${
-                    isHighlighted
-                        ? 'text-black hover:text-white'
-                        : 'text-white hover:text-primary'
-                }`}
+                href="/expertise"
+                className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider transition-colors group/link ${isHighlighted
+                    ? 'text-black hover:text-white'
+                    : 'text-white hover:text-primary'
+                    }`}
             >
                 Learn More
                 <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
@@ -60,31 +53,24 @@ const ServiceItem = ({ icon: Icon, title, desc, number, isHighlighted }) => (
 export const Services = () => {
     const services = [
         {
-            icon: BarChart,
-            title: "Marketing & SEO",
-            desc: "Strategic digital marketing solutions to boost your online visibility and drive qualified traffic to your business.",
-            number: "01",
-            isHighlighted: false
-        },
-        {
             icon: Smartphone,
-            title: "Mobile & Web App",
-            desc: "Custom application development with cutting-edge technology for seamless user experiences across all devices.",
-            number: "02",
+            title: "Custom Software Development",
+            desc: "End-to-end software solutions including CRMs, enterprise applications, and automation tools tailored to your business needs.",
+            number: "01",
             isHighlighted: true
         },
         {
-            icon: PenTool,
-            title: "UI/UX Design",
-            desc: "User-centered design that combines aesthetics with functionality to create engaging digital experiences.",
-            number: "03",
+            icon: Layers,
+            title: "Web Development",
+            desc: "Expert MERN stack, Next.js development for high-performance websites, web applications, and e-commerce platforms.",
+            number: "02",
             isHighlighted: false
         },
         {
-            icon: Cpu,
-            title: "Latest Tech",
-            desc: "Leveraging emerging technologies like AI, blockchain, and IoT to future-proof your digital solutions.",
-            number: "04",
+            icon: BarChart,
+            title: "SEO Optimization",
+            desc: "Data-driven SEO strategies to improve your search rankings and drive organic traffic to your digital platforms.",
+            number: "03",
             isHighlighted: false
         },
     ];
@@ -110,7 +96,7 @@ export const Services = () => {
                                 We offer comprehensive digital services tailored to transform your business and accelerate growth in the digital landscape.
                             </p>
                             <a
-                                href="#contact"
+                                href="/expertise"
                                 className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white hover:text-primary transition-colors group"
                             >
                                 View All Services
@@ -121,7 +107,7 @@ export const Services = () => {
                 </div>
 
                 {/* Services Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {services.map((service, index) => (
                         <ServiceItem
                             key={index}
@@ -137,29 +123,29 @@ export const Services = () => {
                 {/* Bottom Stats */}
                 <div className="mt-20 pt-12 border-t border-zinc-800">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="text-center lg:text-left">
-                            <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                        <div className="text-center">
+                            <div className="flex items-center justify-center gap-3 mb-2">
                                 <Layers className="w-6 h-6 text-primary" />
-                                <span className="text-4xl font-black text-white">50+</span>
+                                <span className="text-4xl font-black text-white">3</span>
                             </div>
-                            <span className="text-zinc-500 text-sm">Services Offered</span>
+                            <span className="text-zinc-500 text-sm">Core Services</span>
                         </div>
-                        <div className="text-center lg:text-left">
-                            <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                        <div className="text-center">
+                            <div className="flex items-center justify-center gap-3 mb-2">
                                 <Globe className="w-6 h-6 text-primary" />
-                                <span className="text-4xl font-black text-white">25+</span>
+                                <span className="text-4xl font-black text-white">2+</span>
                             </div>
-                            <span className="text-zinc-500 text-sm">Countries Served</span>
+                            <span className="text-zinc-500 text-sm">Cities Served</span>
                         </div>
-                        <div className="text-center lg:text-left">
-                            <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                        <div className="text-center">
+                            <div className="flex items-center justify-center gap-3 mb-2">
                                 <BarChart className="w-6 h-6 text-primary" />
                                 <span className="text-4xl font-black text-white">95%</span>
                             </div>
                             <span className="text-zinc-500 text-sm">Success Rate</span>
                         </div>
-                        <div className="text-center lg:text-left">
-                            <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
+                        <div className="text-center">
+                            <div className="flex items-center justify-center gap-3 mb-2">
                                 <Cpu className="w-6 h-6 text-primary" />
                                 <span className="text-4xl font-black text-white">24/7</span>
                             </div>

@@ -45,7 +45,7 @@ export const ContactForm = () => {
     };
 
     const services = [
-        { value: 'branding', label: 'Brand Strategy' },
+        // { value: 'branding', label: 'Brand Strategy' },
         { value: 'web-design', label: 'Web Design & Development' },
         { value: 'mobile-app', label: 'Mobile App Development' },
         { value: 'marketing', label: 'Digital Marketing' },
@@ -53,12 +53,12 @@ export const ContactForm = () => {
         { value: 'other', label: 'Other' },
     ];
 
-    const budgets = [
-        { value: '5k-10k', label: '$5,000 - $10,000' },
-        { value: '10k-25k', label: '$10,000 - $25,000' },
-        { value: '25k-50k', label: '$25,000 - $50,000' },
-        { value: '50k+', label: '$50,000+' },
-    ];
+    // const budgets = [
+    //     { value: '5k-10k', label: '$5,000 - $10,000' },
+    //     { value: '10k-25k', label: '$10,000 - $25,000' },
+    //     { value: '25k-50k', label: '$25,000 - $50,000' },
+    //     { value: '50k+', label: '$50,000+' },
+    // ];
 
     return (
         <div className="h-full flex flex-col">
@@ -103,11 +103,17 @@ export const ContactForm = () => {
                         options={services}
                         required
                     />
-                    <SelectField
-                        label="Project Budget"
-                        name="budget"
-                        options={budgets}
-                    />
+                    <div className="group">
+                        <label className="text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-3">
+                            Project Budget
+                        </label>
+                        <textarea
+                            name="budget"
+                            placeholder="Enter your estimated budget or range..."
+                            rows={1}
+                            className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-5 py-4 text-white placeholder-zinc-500 focus:outline-none focus:border-primary transition-colors text-sm resize-none"
+                        ></textarea>
+                    </div>
                 </div>
 
                 {/* Message */}
