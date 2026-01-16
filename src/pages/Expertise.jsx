@@ -10,7 +10,7 @@ import {
     Zap,
     Database
 } from 'lucide-react';
-import { GeneratedImage } from '../components/ui/GeneratedImage';
+
 
 const ServiceCard = ({ icon: Icon, title, description, features, index, highlighted }) => (
     <div className={`group relative p-8 lg:p-10 rounded-2xl transition-all duration-500 h-full ${highlighted
@@ -265,8 +265,9 @@ export const Expertise = () => {
 
                         <div className="relative">
                             <div className="rounded-3xl overflow-hidden">
-                                <GeneratedImage
-                                    prompt="Modern creative workspace with multiple monitors showing code and design, dark ambient lighting, professional studio, neon green accent lights"
+                                <img
+                                    src="/Expertise/expertise_hero.png"
+                                    alt="Modern creative workspace showcasing our expertise"
                                     className="w-full aspect-square object-cover"
                                 />
                             </div>
