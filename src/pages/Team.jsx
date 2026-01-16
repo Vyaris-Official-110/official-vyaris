@@ -86,7 +86,7 @@ export const Team = () => {
         },
         {
             name: "Kush Rana",
-            img: "/team/KushRana.jpg", // Placeholder until photo is available
+            img: "/team/KushRana.jpeg", // Placeholder until photo is available
             socials: { linkedin: "https://www.linkedin.com/in/kush-rana-9357b7272/" }
         },
         {

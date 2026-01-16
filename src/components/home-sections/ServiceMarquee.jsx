@@ -8,7 +8,7 @@ const services = [
   { name: 'Mobile Apps', hollow: false },
   // { name: 'E-Commerce', hollow: true },
   { name: 'SEO Optimization', hollow: false },
-  { name: 'Custom Software Development', hollow: true },
+  { name: 'Custom Software Development', hollow: false },
 ];
 
 const ServiceItem = ({ name, hollow }) => (

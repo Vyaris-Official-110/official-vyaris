@@ -2,13 +2,13 @@ import { Star } from 'lucide-react';
 
 const tickerItems = [
     { text: 'Web Development', highlight: true },
-    { text: 'Brand Strategy', highlight: false },
-    { text: 'UI/UX Design', highlight: true },
-    { text: 'Digital Marketing', highlight: false },
+    // { text: 'Brand Strategy', highlight: false },
+    // { text: 'UI/UX Design', highlight: true },
+    // { text: 'Digital Marketing', highlight: false },
     { text: 'Mobile Apps', highlight: true },
-    { text: 'E-Commerce', highlight: false },
+    // { text: 'E-Commerce', highlight: false },
     { text: 'SEO Optimization', highlight: true },
-    { text: 'Content Creation', highlight: false },
+    { text: 'Custom Software Development', highlight: true },
 ];
 
 export const Ticker = () => {
