@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { supabase } from '../../lib/supabase';
 
 const InputField = ({ label, type = 'text', placeholder, required, name }) => (
     <div className="group">
@@ -36,12 +37,41 @@ const SelectField = ({ label, options, required, name }) => (
 
 export const ContactForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate form submission
-        setTimeout(() => setIsSubmitting(false), 2000);
+        setSubmitStatus(null);
+
+        const formData = new FormData(e.target);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            service: formData.get('service'),
+            budget: formData.get('budget'),
+            message: formData.get('message'),
+            created_at: new Date().toISOString(),
+        };
+
+        try {
+            const { error } = await supabase
+                .from('contact_submissions')
+                .insert([data]);
+
+            if (error) throw error;
+
+            setSubmitStatus({ type: 'success', message: 'Thank you! Your message has been sent successfully.' });
+            e.target.reset();
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setSubmitStatus({
+                type: 'error',
+                message: 'Sorry, there was an error sending your message. Please try again or contact us directly.'
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const services = [
@@ -75,6 +105,17 @@ export const ContactForm = () => {
                     Fill out the form below and we'll get back to you within 24 hours.
                 </p>
             </div>
+
+            {/* Status Message */}
+            {submitStatus && (
+                <div className={`p-4 rounded-xl border ${
+                    submitStatus.type === 'success'
+                        ? 'bg-green-500/10 border-green-500/20 text-green-400'
+                        : 'bg-red-500/10 border-red-500/20 text-red-400'
+                }`}>
+                    <p className="text-sm">{submitStatus.message}</p>
+                </div>
+            )}
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-6 flex-1">
